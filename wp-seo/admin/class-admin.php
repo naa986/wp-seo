@@ -145,17 +145,6 @@ class WPSEO_Admin {
 			),
 		);
 
-		// Add Extension submenu page
-		$submenu_pages[] = array(
-			'wpseo_dashboard',
-			'',
-			'<span style="color:#f18500">' . __( 'Extensions', 'wordpress-seo' ) . '</span>',
-			$manage_options_cap,
-			'wpseo_licenses',
-			array( $this, 'load_page' ),
-			null,
-		);
-
 		// Allow submenu pages manipulation
 		$submenu_pages = apply_filters( 'wpseo_submenu_pages', $submenu_pages );
 
@@ -236,12 +225,6 @@ class WPSEO_Admin {
 					'load_page',
 				) );
 			}
-
-			// Add Extension submenu page
-			add_submenu_page( 'wpseo_dashboard', __( 'Yoast WordPress SEO:', 'wordpress-seo' ) . ' ' . __( 'Extensions', 'wordpress-seo' ), __( 'Extensions', 'wordpress-seo' ), 'delete_users', 'wpseo_licenses', array(
-				$this,
-				'load_page',
-			) );
 		}
 	}
 
@@ -271,10 +254,6 @@ class WPSEO_Admin {
 
 			case 'wpseo_xml':
 				require_once( WPSEO_PATH . 'admin/pages/xml-sitemaps.php' );
-				break;
-
-			case 'wpseo_licenses':
-				require_once( WPSEO_PATH . 'admin/pages/licenses.php' );
 				break;
 
 			case 'wpseo_dashboard':

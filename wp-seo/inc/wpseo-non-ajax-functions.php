@@ -425,12 +425,6 @@ function wpseo_admin_bar_menu() {
 			'title'  => __( 'Advanced', 'wordpress-seo' ),
 			'href'   => admin_url( 'admin.php?page=wpseo_advanced' ),
 		) );
-		$wp_admin_bar->add_menu( array(
-			'parent' => 'wpseo-settings',
-			'id'     => 'wpseo-licenses',
-			'title'  => __( 'Extensions', 'wordpress-seo' ),
-			'href'   => admin_url( 'admin.php?page=wpseo_licenses' ),
-		) );
 	}
 }
 

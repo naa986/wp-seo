@@ -28,8 +28,7 @@ class WPSEO_Pointers {
 		'titles'    => 'titles_pointer',
 		'social'    => 'social_pointer',
 		'xml'       => 'xml_sitemaps_pointer',
-		'advanced'  => 'advanced_pointer',
-		'licenses'  => 'licenses_pointer',
+		'advanced'  => 'advanced_pointer'
 	);
 
 	/**
@@ -240,19 +239,7 @@ class WPSEO_Pointers {
 			               . '<p><strong>' . __( 'Tab: Your Info / Company Info', 'wordpress-seo' ) . '</strong><br/>' . __( 'Add some info here needed for Google\'s Knowledge Graph.', 'wordpress-seo' ) . '</p>'
 			               . '<p><strong>' . __( 'Tab: Webmaster Tools', 'wordpress-seo' ) . '</strong><br/>' . __( 'You can add the verification codes for the different Webmaster Tools programs here, we highly encourage you to check out both Google and Bing&#8217;s
 	Webmaster Tools.', 'wordpress-seo' ) . '</p>'
-			               . '<p><strong>' . __( 'Tab: Security', 'wordpress-seo' ) . '</strong><br/>' . __( 'Determine who has access to the plugins advanced settings on the post edit screen.', 'wordpress-seo' ) . '</p>'
-			               . '<p><strong>' . __( 'More WordPress SEO', 'wordpress-seo' ) . '</strong><br/>' . sprintf( __( 'There&#8217;s more to learn about WordPress &amp; SEO than just using this plugin. A great start is our article %1$sthe definitive guide
-	to WordPress SEO%2$s.', 'wordpress-seo' ), '<a target="_blank" href="' . esc_url( 'https://yoast.com/articles/wordpress-seo/#utm_source=wpseo_dashboard&utm_medium=wpseo_tour&utm_campaign=tour' ) . '">',
-					       '</a>' ) . '</p>'
-			               . '<p><strong style="font-size:150%;">' . __( 'Subscribe to our Newsletter', 'wordpress-seo' ) . '</strong><br/>'
-			               . __( 'If you would like us to keep you up-to-date regarding WordPress SEO and other plugins by Yoast, subscribe to our newsletter:', 'wordpress-seo' ) . '</p>'
-			               . '<form action="http://yoast.us1.list-manage1.com/subscribe/post?u=ffa93edfe21752c921f860358&amp;id=972f1c9122" method="post" selector="newsletter-form" accept-charset="' . esc_attr( get_bloginfo( 'charset' ) ) . '">'
-			               . '<p>'
-			               . '<input style="margin: 5px; color:#666" name="EMAIL" value="' . esc_attr( $current_user->user_email ) . '" selector="newsletter-email" placeholder="' . __( 'Email', 'wordpress-seo' ) . '"/>'
-			               . '<input type="hidden" name="group" value="2"/>'
-			               . '<button type="submit" class="button-primary">' . __( 'Subscribe', 'wordpress-seo' ) . '</button>'
-			               . '</p>'
-			               . '</form>',
+			               . '<p><strong>' . __( 'Tab: Security', 'wordpress-seo' ) . '</strong><br/>' . __( 'Determine who has access to the plugins advanced settings on the post edit screen.', 'wordpress-seo' ) . '</p>',
 			'next_page' => 'titles',
 		);
 	}
@@ -319,24 +306,7 @@ class WPSEO_Pointers {
 	private function advanced_pointer() {
 		return array(
 			'content'   => '<h3>' . __( 'Advanced Settings', 'wordpress-seo' ) . '</h3><p>' . __( 'All of the options on these tabs are for advanced users only, if you don&#8217;t know whether you should check any, don&#8217;t touch them.', 'wordpress-seo' ) . '</p>',
-			'next_page' => 'licenses',
 			'prev_page' => 'xml',
-		);
-	}
-
-	/**
-	 * Returns the content of the extensions and licenses page pointer
-	 *
-	 * @return array
-	 */
-	private function licenses_pointer() {
-		return array(
-			'content'   => '<h3>' . __( 'Extensions and Licenses', 'wordpress-seo' ) . '</h3>'
-			               . '<p><strong>' . __( 'Extensions', 'wordpress-seo' ) . '</strong><br/>' . sprintf( __( 'The powerful functions of WordPress SEO can be extended with %1$sYoast premium plugins%2$s. These premium plugins require the installation of WordPress SEO or WordPress SEO Premium and add specific functionality. You can read all about the Yoast Premium Plugins %1$shere%2$s.', 'wordpress-seo' ), '<a target="_blank" href="' . esc_url( 'https://yoast.com/wordpress/plugins/#utm_source=wpseo_licenses&utm_medium=wpseo_tour&utm_campaign=tour' ) . '">', '</a>' ) . '</p>'
-			               . '<p><strong>' . __( 'Licenses', 'wordpress-seo' ) . '</strong><br/>' . __( 'Once you&#8217;ve purchased WordPress SEO Premium or any other premium Yoast plugin, you&#8217;ll have to enter a license key. You can do so on the Licenses-tab. Once you&#8217;ve activated your premium plugin, you can use all its powerful features.', 'wordpress-seo' ) . '</p>'
-			               . '<p><strong>' . __( 'Like this plugin?', 'wordpress-seo' ) . '</strong><br/>' . sprintf( __( 'So, we&#8217;ve come to the end of the tour. If you like the plugin, please %srate it 5 stars on WordPress.org%s!', 'wordpress-seo' ), '<a target="_blank" href="https://wordpress.org/plugins/wordpress-seo/">', '</a>' ) . '</p>'
-			               . '<p>' . sprintf( __( 'Thank you for using our plugin and good luck with your SEO!<br/><br/>Best,<br/>Team Yoast - %1$sYoast.com%2$s', 'wordpress-seo' ), '<a target="_blank" href="' . esc_url( 'https://yoast.com/#utm_source=wpseo_licenses&utm_medium=wpseo_tour&utm_campaign=tour' ) . '">', '</a>' ) . '</p>',
-			'prev_page' => 'advanced',
 		);
 	}
 
